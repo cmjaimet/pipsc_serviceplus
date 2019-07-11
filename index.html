@@ -2,11 +2,55 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Get Insurance Quote</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="quote.js"></script>
+
 </head>
 <body>
+        <div class="container">
+            <form>
+                <div class="form-group">
+                    <label for="Gender">Gender</label>
+                        <select class="custom-select" id="Gender">
+                                <option disabled selected value>Select</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                    </div>
+                <div class="form-group">
+                        <label for="age">Today my Age is:</label>
+                        <select class="custom-select" id="age">
+                                <option disabled selected value>Select</option>
+                                <option value="29">Under 29</option>
+                                <option value="31">Between 30-34</option>
+                                <option value="36">Between 35-39</option>
+                                <option value="41">Between 40-44</option>
+                                <option value="46">Between 45-49</option>
+                                <option value="51">Between 50-54</option>
+                                <option value="56">Between 55-59</option>
+                                <option value="61">Between 60-64</option>
+                                <option value="64">Between 65-69</option>
+                            </select>
+                    </div>
+                <div class="form-group">
+                    <label for="I am">I am</label>
+                        <select class="custom-select" id="smoking_habit">
+                                <option disabled selected value>Select</option>
+                                <option value="true">Smoker</option>
+                                <option value="false">Non smoker</option>
+                            </select>
+                    </div> 
+                <div class="form-group">
+                        <label for="coverage amount">The coverage I want is:</label>
+                            <input type="text" id="coverage_amount" class="form-control" onkeyup="this.value=CurrencyFormat(this.value)" aria-label="Amount (to the nearest dollar)">
+                        </div>   
 
+                    <button type="button" class="btn btn-primary" onclick="javascript:GetQuote()">Submit</button>
+                </form>
+                <input type="text" id="monthly_premium" value="" disabled />  
+            </div>    
 </body>
 </html> 
