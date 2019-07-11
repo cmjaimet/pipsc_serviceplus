@@ -1,11 +1,11 @@
 // All javascript functions goes here
-function CurrencyFormat(val){
-  //remove commas
-  retVal = val ? parseFloat(val.replace(/,/g, '')) : 0;
+// function CurrencyFormat(val){
+//   //remove commas
+//   retVal = val ? parseFloat(val.replace(/,/g, '')) : 0;
 
-  //apply formatting
-  return retVal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
+//   //apply formatting
+//   return retVal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+// }
 function GetQuote(){
     var e = document.getElementById("Gender");
     console.log(e.options[e.selectedIndex].value)
@@ -21,7 +21,9 @@ function GetQuote(){
 
     var e = document.getElementById("coverage_amount");
     console.log(e.value);
-    var x = Number(e.value.replace(/\,/g,''))/50000
+    var coverage_amount = e.options[e.selectedIndex].value
+    var x = coverage_amount/50000
+    // var x = Number(e.value.replace(/\,/g,''))/50000
     
         if(age>0 && age<30)
         {
