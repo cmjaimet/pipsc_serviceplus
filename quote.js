@@ -1,45 +1,49 @@
 // All javascript functions goes here
-// function CurrencyFormat(val){
-//   //remove commas
-//   retVal = val ? parseFloat(val.replace(/,/g, '')) : 0;
 
-//   //apply formatting
-//   return retVal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-// }
-
-// function coverage_amount_change(){
-//     var age = document.getElementById("age").options[document.getElementById("age").selectedIndex].value
-//     var selectobject =  document.getElementById("coverage_amount") 
-//     if(age >= 65){
-//         for(var i=selectobject.length -1; i>=0; i--){
-//             if (selectobject.options[i].value == '200000' || selectobject.options[i].value == '250000' || selectobject.options[i].value == '300000' ||
-//                 selectobject.options[i].value == '350000' || selectobject.options[i].value == '400000' || selectobject.options[i].value == '450000' || 
-//                 selectobject.options[i].value == '500000' )
-//                 selectobject.remove(i);
-//         }
-//     } else {
-//         selectobject.options.length = 0;
-//         selectobject.options[0] =
-//     }
-// }
+function coverage_amount_change(){
+    var age = document.getElementById("age").options[document.getElementById("age").selectedIndex].value
+    var selectobject =  document.getElementById("coverage_amount") 
+    if(age >= 65){
+        for(var i=selectobject.length -1; i>=0; i--){
+            if (selectobject.options[i].value == '200000' || selectobject.options[i].value == '250000' || selectobject.options[i].value == '300000' ||
+                selectobject.options[i].value == '350000' || selectobject.options[i].value == '400000' || selectobject.options[i].value == '450000' || 
+                selectobject.options[i].value == '500000' )
+                selectobject.remove(i);
+                
+        }
+    } else {
+        selectobject.options.length = 0;
+            selectobject.options[0]= new Option('Select')
+            selectobject.options[1] = new Option('$50,000',50000)
+            selectobject.options[2] = new Option('$100,000',100000)
+            selectobject.options[3] = new Option('$150,000',150000)
+            selectobject.options[4] = new Option('$200,000',200000)
+            selectobject.options[5] = new Option('$250,000',250000)
+            selectobject.options[6] = new Option('$300,000',300000)
+            selectobject.options[7] = new Option('$350,000',350000)
+            selectobject.options[8] = new Option('$400,000',400000)
+            selectobject.options[9] = new Option('$450,000',450000)
+            selectobject.options[10] = new Option('$500,000',500000)
+            
+            
+        
+    }
+}
 function GetQuote(){
     var e = document.getElementById("Gender");
-    console.log(e.options[e.selectedIndex].value)
     var gender = e.options[e.selectedIndex].value
 
     var e = document.getElementById("age");
-    console.log(e.options[e.selectedIndex].value)
     var age = e.options[e.selectedIndex].value
 
     var e = document.getElementById("smoking_habit");
-    console.log(e.options[e.selectedIndex].value)
     var smoking = e.options[e.selectedIndex].value
 
     var e = document.getElementById("coverage_amount");
-    console.log(e.value);
+    var result =  e.options[e.selectedIndex].text;
+    document.getElementById("coverage_amount_p").innerHTML =  result;
     var coverage_amount = e.options[e.selectedIndex].value
     var x = coverage_amount/50000
-    // var x = Number(e.value.replace(/\,/g,''))/50000
     
         if(age>0 && age<30)
         {

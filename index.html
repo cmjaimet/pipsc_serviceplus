@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Get Insurance Quote</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="quote.js"></script>
 
 </head>
 <body>
-        <div class="container">
+        <div class="container" style="margin-top: 70px">
+            <h3>Let's answer the question: How much to protect that future?</h3>
+            <h4>Just answer these four quick questions</h4>
+            <p>At ServicePlus we take your privacy very seriously. None of the information that you enter is being stored or kept. 
+                The information that you enter here is used only to calculate your monthly premium in this form.</p>
             <form>
                 <div class="form-group">
                     <label for="Gender">Gender</label>
@@ -26,7 +31,7 @@
                     </div>
                 <div class="form-group">
                         <label for="age">Today my Age is:</label>
-                        <select class="custom-select" id="age">
+                        <select class="custom-select" id="age" onchange="coverage_amount_change()">
                                 <option disabled selected value>Select</option>
                                 <option value="29">Under 29</option>
                                 <option value="31">Between 30-34</option>
@@ -64,10 +69,20 @@
                                     <option value="500000">$500,000</option>
                                 </select>    
                         </div>   
-
-                    <button type="button" class="btn btn-primary" onclick="javascript:GetQuote()">Submit</button>
+                <div class="montly_premium_button">
+                    <button type="button" style="margin-top: 30px" class="btn btn-success" onclick="javascript:GetQuote()">See My Monthly Premium</button>
+                    <p>(You'll be able to enter the contest too)</p>
+                </div>        
                 </form>
-                <input type="text" id="monthly_premium" value="" disabled />  
+                <h3 style="text-align: center">Your Monthly premium for <p id="coverage_amount_p" style="display: inline-block">coverage amount</p> worth<br>of protecting that future is just:</h3>
+                <div class="montly_premium_button">
+                        <input type="text" id="monthly_premium" style="text-align: center; border: none;margin-top: 30px" value="00.00" disabled />
+                        <p>Get another quote?</p>
+                        <button type="button" class="btn btn-success"><a href="https://www.stackoverflow.com" style="color: white; text-decoration: none;margin-top: 10px">Complete your Application</a></button>
+                        <p>(No information will be transmitted)</p>
+                        <button type="button" style="margin-top: 20px" class="btn btn-primary">No thanks. I'll just enter the contest.</button>
+                </div>
+                  
             </div>    
 </body>
 </html> 
