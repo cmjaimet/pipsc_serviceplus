@@ -15,7 +15,7 @@ function coverage_amount_change(){
         
     } else {
         selectobject.options.length = 0;
-            selectobject.options[0]= new Option('Select')
+            selectobject.options[0]= new Option('Select',"")
             selectobject.options[1] = new Option('$50,000',50000)
             selectobject.options[2] = new Option('$100,000',100000)
             selectobject.options[3] = new Option('$150,000',150000)
@@ -230,3 +230,16 @@ function GetQuote(){
 
 
 }
+
+function checkform(){
+    var f = document.forms["insurance_quote"].elements;
+    var cansubmit = true;
+
+    for (var i = 0; i < f.length-1; i++) {
+        if (f[i].value.length == 0)
+            cansubmit = false;
+    }
+
+    document.getElementById('submitbutton').disabled = !cansubmit;
+}
+window.onload = checkform;

@@ -19,7 +19,7 @@
             <form name="insurance_quote">
                 <div class="form-group">
                     <label for="Gender">Gender</label>
-                        <select class="custom-select" id="Gender" required>
+                        <select class="custom-select" id="Gender" required onchange="checkform()">
                                 <option disabled selected value>Select</option>
                                 <option value="male">Man</option>
                                 <option value="female">Woman</option>
@@ -31,7 +31,7 @@
                     </div>
                 <div class="form-group">
                         <label for="age">Today my Age is:</label>
-                        <select class="custom-select" id="age" onchange="coverage_amount_change()" required>
+                        <select class="custom-select" id="age" onchange="coverage_amount_change(); checkform()" required>
                                 <option disabled selected value>Select</option>
                                 <option value="29">Under 29</option>
                                 <option value="31">Between 30-34</option>
@@ -46,7 +46,7 @@
                     </div>
                 <div class="form-group">
                     <label for="I am">I am</label>
-                        <select class="custom-select" id="smoking_habit" required>
+                        <select class="custom-select" id="smoking_habit" required onchange="checkform()">
                                 <option disabled selected value>Select</option>
                                 <option value="true">Smoker</option>
                                 <option value="false">Non smoker</option>
@@ -54,7 +54,7 @@
                     </div> 
                 <div class="form-group">
                         <label for="coverage amount">The coverage I want is:</label>
-                            <select class="custom-select" id="coverage_amount" required>
+                            <select class="custom-select" id="coverage_amount" required onchange="checkform()">
                                     <option disabled selected value>Select</option>
                                     <option value="50000">$50,000</option>
                                     <option value="100000">$100,000</option>
@@ -70,7 +70,7 @@
                                 <small id="premium_text" style="display: none;color: indianred">The maximum life insurance coverage available at age 65 is $150,000 and terminates at age 70</small>
                         </div>   
                 <div class="montly_premium_button">
-                    <button type="button" style="margin-top: 30px" class="btn btn-success" onclick="javascript:GetQuote()">See My Monthly Premium</button>
+                    <button type="button" id="submitbutton" style="margin-top: 30px" class="btn btn-success" onclick="javascript:GetQuote()">See My Monthly Premium</button>
                     <p>(You'll be able to enter the contest too)</p>
                 </div>        
                 </form>
