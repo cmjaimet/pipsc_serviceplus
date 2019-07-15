@@ -2,3 +2,18 @@
 .montly_premium_button {
     text-align: center;
 }
+.input-euro {
+    position: relative;
+    font-size: 30px;
+}
+.input-euro.left input {
+    padding-left:18px;
+}
+.input-euro:before {
+    position: absolute;
+    top: -5px;
+    content:"$";
+}
+.input-euro.left:before {
+    left: 82px;
+}

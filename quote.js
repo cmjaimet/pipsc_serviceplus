@@ -52,18 +52,18 @@ function GetQuote(){
             if(gender == 'male' || gender == 'trans_man' || gender == 'two_spirit' || gender == 'non_binary')
             {
                 if(smoking == 'true'){
-                    var monthly_premium = x*2.81;
+                    var monthly_premium =  (x*2.81).toFixed(2);
                     document.getElementById("monthly_premium").value = monthly_premium;
                 } else {
-                    var monthly_premium = x*2.39;
+                    var monthly_premium = (x*2.39).toFixed(2);
                     document.getElementById("monthly_premium").value = monthly_premium;
                 }
             } else{
                 if(smoking == 'true'){
-                    var monthly_premium = x*1.74;
+                    var monthly_premium = (x*1.74).toFixed(2);
                     document.getElementById("monthly_premium").value = monthly_premium;
                 } else {
-                    var monthly_premium = x*1.49;
+                    var monthly_premium = (x*1.49).toFixed(2);
                     document.getElementById("monthly_premium").value = monthly_premium;
                 }
             }
@@ -72,18 +72,18 @@ function GetQuote(){
                 if(gender == 'male' || gender == 'trans_man' || gender == 'two_spirit' || gender == 'non_binary')
                 {
                     if(smoking == 'true'){
-                        var monthly_premium = x*2.81;
+                        var monthly_premium = (x*2.81).toFixed(2);
                         document.getElementById("monthly_premium").value = monthly_premium;
                     } else {
-                        var monthly_premium = x*2.39;
+                        var monthly_premium = (x*2.39).toFixed(2);
                         document.getElementById("monthly_premium").value = monthly_premium;
                     }
                 } else{
                     if(smoking == 'true'){
-                        var monthly_premium = x*1.93;
+                        var monthly_premium = (x*1.93).toFixed(2);
                         document.getElementById("monthly_premium").value = monthly_premium;
                     } else {
-                        var monthly_premium = x*1.64;
+                        var monthly_premium = (x*1.64).toFixed(2);
                         document.getElementById("monthly_premium").value = monthly_premium;
                     }
                 }
@@ -92,18 +92,18 @@ function GetQuote(){
                 if(gender == 'male' || gender == 'trans_man' || gender == 'two_spirit' || gender == 'non_binary')
                 {
                     if(smoking == 'true'){
-                        var monthly_premium = x*3.65;
+                        var monthly_premium = (x*3.65).toFixed(2);
                         document.getElementById("monthly_premium").value = monthly_premium;
                     } else {
-                        var monthly_premium = x*3.11;
+                        var monthly_premium = (x*3.11).toFixed(2);
                         document.getElementById("monthly_premium").value = monthly_premium;
                     }
                 } else{
                     if(smoking == 'true'){
-                        var monthly_premium = x*2.25;
+                        var monthly_premium = (x*2.25).toFixed(2);
                         document.getElementById("monthly_premium").value = monthly_premium;
                     } else {
-                        var monthly_premium = x*1.91;
+                        var monthly_premium = (x*1.91).toFixed(2);
                         document.getElementById("monthly_premium").value = monthly_premium;
                     }
                 }
@@ -112,18 +112,18 @@ function GetQuote(){
                 if(gender == 'male' || gender == 'trans_man' || gender == 'two_spirit' || gender == 'non_binary')
                 {
                     if(smoking == 'true'){
-                        var monthly_premium = x*5.23;
+                        var monthly_premium = (x*5.23).toFixed(2);
                         document.getElementById("monthly_premium").value = monthly_premium;
                     } else {
-                        var monthly_premium = x*4.43;
+                        var monthly_premium = (x*4.43).toFixed(2);
                         document.getElementById("monthly_premium").value = monthly_premium;
                     }
                 } else{
                     if(smoking == 'true'){
-                        var monthly_premium = x*2.90;
+                        var monthly_premium = (x*2.90).toFixed(2);
                         document.getElementById("monthly_premium").value = monthly_premium;
                     } else {
-                        var monthly_premium = x*2.46;
+                        var monthly_premium = (x*2.46).toFixed(2);
                         document.getElementById("monthly_premium").value = monthly_premium;
                     }
                 }
@@ -132,18 +132,18 @@ function GetQuote(){
                 if(gender == 'male' || gender == 'trans_man' || gender == 'two_spirit' || gender == 'non_binary')
                 {
                     if(smoking == 'true'){
-                        var monthly_premium = x*8.86;
+                        var monthly_premium = (x*8.86).toFixed(2);
                         document.getElementById("monthly_premium").value = monthly_premium;
                     } else {
-                        var monthly_premium = x*7.54;
+                        var monthly_premium = (x*7.54).toFixed(2);
                         document.getElementById("monthly_premium").value = monthly_premium;
                     }
                 } else{
                     if(smoking == 'true'){
-                        var monthly_premium = x*4.81;
+                        var monthly_premium = (x*4.81).toFixed(2);
                         document.getElementById("monthly_premium").value = monthly_premium;
                     } else {
-                        var monthly_premium = x*4.10;
+                        var monthly_premium = (x*4.10).toFixed(2);
                         document.getElementById("monthly_premium").value = monthly_premium;
                     }
                 }
@@ -152,18 +152,18 @@ function GetQuote(){
                 if(gender == 'male' || gender == 'trans_man' || gender == 'two_spirit' || gender == 'non_binary')
                 {
                     if(smoking == 'true'){
-                        var monthly_premium = x*14.57;
+                        var monthly_premium = (x*14.57).toFixed(2);
                         document.getElementById("monthly_premium").value = monthly_premium;
                     } else {
-                        var monthly_premium = x*12.39;
+                        var monthly_premium = (x*12.39).toFixed(2);
                         document.getElementById("monthly_premium").value = monthly_premium;
                     }
                 } else{
                     if(smoking == 'true'){
-                        var monthly_premium = x*8.04;
+                        var monthly_premium = (x*8.04).toFixed(2);
                         document.getElementById("monthly_premium").value = monthly_premium;
                     } else {
-                        var monthly_premium = x*6.83;
+                        var monthly_premium = (x*6.83).toFixed(2);
                         document.getElementById("monthly_premium").value = monthly_premium;
                     }
                 }
@@ -172,18 +172,18 @@ function GetQuote(){
                 if(gender == 'male' || gender == 'trans_man' || gender == 'two_spirit' || gender == 'non_binary')
                 {
                     if(smoking == 'true'){
-                        var monthly_premium = x*22.74;
+                        var monthly_premium = (x*22.74).toFixed(2);
                         document.getElementById("monthly_premium").value = monthly_premium;
                     } else {
-                        var monthly_premium = x*19.34;
+                        var monthly_premium = (x*19.34).toFixed(2);
                         document.getElementById("monthly_premium").value = monthly_premium;
                     }
                 } else{
                     if(smoking == 'true'){
-                        var monthly_premium = x*13.13;
+                        var monthly_premium = (x*13.13).toFixed(2);
                         document.getElementById("monthly_premium").value = monthly_premium;
                     } else {
-                        var monthly_premium = x*11.15;
+                        var monthly_premium = (x*11.15).toFixed(2);
                         document.getElementById("monthly_premium").value = monthly_premium;
                     }
                 }
@@ -192,18 +192,18 @@ function GetQuote(){
                 if(gender == 'male' || gender == 'trans_man' || gender == 'two_spirit' || gender == 'non_binary')
                 {
                     if(smoking == 'true'){
-                        var monthly_premium = x*35.34;
+                        var monthly_premium = (x*35.34).toFixed(2);
                         document.getElementById("monthly_premium").value = monthly_premium;
                     } else {
-                        var monthly_premium = x*30.03;
+                        var monthly_premium = (x*30.03).toFixed(2);
                         document.getElementById("monthly_premium").value = monthly_premium;
                     }
                 } else{
                     if(smoking == 'true'){
-                        var monthly_premium = x*18.21;
+                        var monthly_premium = (x*18.21).toFixed(2);
                         document.getElementById("monthly_premium").value = monthly_premium;
                     } else {
-                        var monthly_premium = x*15.48;
+                        var monthly_premium = (x*15.48).toFixed(2);
                         document.getElementById("monthly_premium").value = monthly_premium;
                     }
                 }
@@ -211,18 +211,18 @@ function GetQuote(){
             if(gender == 'male' || gender == 'trans_man' || gender == 'two_spirit' || gender == 'non_binary')
                 {
                     if(smoking == 'true'){
-                        var monthly_premium = x*47.92;
+                        var monthly_premium = (x*47.92).toFixed(2);
                         document.getElementById("monthly_premium").value = monthly_premium;
                     } else {
-                        var monthly_premium = x*40.74;
+                        var monthly_premium = (x*40.74).toFixed(2);
                         document.getElementById("monthly_premium").value = monthly_premium;
                     }
                 } else{
                     if(smoking == 'true'){
-                        var monthly_premium = x*27.57;
+                        var monthly_premium = (x*27.57).toFixed(2);
                         document.getElementById("monthly_premium").value = monthly_premium;
                     } else {
-                        var monthly_premium = x*23.44;
+                        var monthly_premium = (x*23.44).toFixed(2);
                         document.getElementById("monthly_premium").value = monthly_premium;
                     }
                 }
