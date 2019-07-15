@@ -2,18 +2,18 @@
 .montly_premium_button {
     text-align: center;
 }
-.input-euro {
+.input-dollar {
     position: relative;
     font-size: 30px;
 }
-.input-euro.left input {
+.input-dollar.left input {
     padding-left:18px;
 }
-.input-euro:before {
+.input-dollar:before {
     position: absolute;
     top: -5px;
     content:"$";
 }
-.input-euro.left:before {
+.input-dollar.left:before {
     left: 82px;
 }
