@@ -11,6 +11,8 @@ function coverage_amount_change(){
                 selectobject.remove(i);
                 
         }
+        document.getElementById("premium_text").style.display = 'block';
+        
     } else {
         selectobject.options.length = 0;
             selectobject.options[0]= new Option('Select')
@@ -25,7 +27,7 @@ function coverage_amount_change(){
             selectobject.options[9] = new Option('$450,000',450000)
             selectobject.options[10] = new Option('$500,000',500000)
             
-            
+            document.getElementById("premium_text").style.display = 'none';       
         
     }
 }
