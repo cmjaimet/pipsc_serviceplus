@@ -38,9 +38,6 @@ function GetQuote(){
     var e = document.getElementById("age");
     var age = e.options[e.selectedIndex].value
 
-    var e = document.getElementById("smoking_habit");
-    var smoking = e.options[e.selectedIndex].value
-
     var e = document.getElementById("coverage_amount");
     var result =  e.options[e.selectedIndex].text;
     document.getElementById("coverage_amount_p").innerHTML =  result;
@@ -48,184 +45,148 @@ function GetQuote(){
     var x = coverage_amount/50000
     
         if(age>0 && age<30)
-        {
-            if(gender == 'male' || gender == 'trans_man' || gender == 'two_spirit' || gender == 'non_binary')
+        {   
+            if(gender == 'male_non_smoker')
             {
-                if(smoking == 'true'){
-                    var monthly_premium =  (x*2.81).toFixed(2);
-                    document.getElementById("monthly_premium").value = monthly_premium;
-                } else {
-                    var monthly_premium = (x*2.39).toFixed(2);
-                    document.getElementById("monthly_premium").value = monthly_premium;
-                }
-            } else{
-                if(smoking == 'true'){
-                    var monthly_premium = (x*1.74).toFixed(2);
-                    document.getElementById("monthly_premium").value = monthly_premium;
-                } else {
-                    var monthly_premium = (x*1.49).toFixed(2);
-                    document.getElementById("monthly_premium").value = monthly_premium;
-                }
+                var monthly_premium = (x*2.39).toFixed(2);
+                document.getElementById("monthly_premium").value = monthly_premium;
+            } else if(gender == 'male_smoker') {
+                var monthly_premium =  (x*2.81).toFixed(2);
+                document.getElementById("monthly_premium").value = monthly_premium;
+            } else if(gender == 'female_non_smoker') {
+                var monthly_premium = (x*1.49).toFixed(2);
+                document.getElementById("monthly_premium").value = monthly_premium;
+            } else {
+                var monthly_premium = (x*1.74).toFixed(2);
+                document.getElementById("monthly_premium").value = monthly_premium;
             }
         } else if(age>=30 && age <=34)
+            {   
+                if(gender == 'male_non_smoker')
             {
-                if(gender == 'male' || gender == 'trans_man' || gender == 'two_spirit' || gender == 'non_binary')
-                {
-                    if(smoking == 'true'){
-                        var monthly_premium = (x*2.81).toFixed(2);
-                        document.getElementById("monthly_premium").value = monthly_premium;
-                    } else {
-                        var monthly_premium = (x*2.39).toFixed(2);
-                        document.getElementById("monthly_premium").value = monthly_premium;
-                    }
-                } else{
-                    if(smoking == 'true'){
-                        var monthly_premium = (x*1.93).toFixed(2);
-                        document.getElementById("monthly_premium").value = monthly_premium;
-                    } else {
-                        var monthly_premium = (x*1.64).toFixed(2);
-                        document.getElementById("monthly_premium").value = monthly_premium;
-                    }
-                }
+                var monthly_premium = (x*2.39).toFixed(2);
+                document.getElementById("monthly_premium").value = monthly_premium;
+            } else if(gender == 'male_smoker') {
+                var monthly_premium =  (x*2.81).toFixed(2);
+                document.getElementById("monthly_premium").value = monthly_premium;
+            } else if(gender == 'female_non_smoker') {
+                var monthly_premium = (x*1.64).toFixed(2);
+                document.getElementById("monthly_premium").value = monthly_premium;
+            } else {
+                var monthly_premium = (x*1.93).toFixed(2);
+                document.getElementById("monthly_premium").value = monthly_premium;
+            }
         } else if(age>=35 && age<=39)
-            {
-                if(gender == 'male' || gender == 'trans_man' || gender == 'two_spirit' || gender == 'non_binary')
+            {   
+                if(gender == 'male_non_smoker')
                 {
-                    if(smoking == 'true'){
-                        var monthly_premium = (x*3.65).toFixed(2);
-                        document.getElementById("monthly_premium").value = monthly_premium;
-                    } else {
-                        var monthly_premium = (x*3.11).toFixed(2);
-                        document.getElementById("monthly_premium").value = monthly_premium;
-                    }
-                } else{
-                    if(smoking == 'true'){
-                        var monthly_premium = (x*2.25).toFixed(2);
-                        document.getElementById("monthly_premium").value = monthly_premium;
-                    } else {
-                        var monthly_premium = (x*1.91).toFixed(2);
-                        document.getElementById("monthly_premium").value = monthly_premium;
-                    }
+                    var monthly_premium = (x*3.11).toFixed(2);
+                    document.getElementById("monthly_premium").value = monthly_premium;
+                } else if(gender == 'male_smoker') {
+                    var monthly_premium =  (x*3.65).toFixed(2);
+                    document.getElementById("monthly_premium").value = monthly_premium;
+                } else if(gender == 'female_non_smoker') {
+                    var monthly_premium = (x*1.91).toFixed(2);
+                    document.getElementById("monthly_premium").value = monthly_premium;
+                } else {
+                    var monthly_premium = (x*2.25).toFixed(2);
+                    document.getElementById("monthly_premium").value = monthly_premium;
                 }
         } else if(age>=40 && age<=44)
-            {
-                if(gender == 'male' || gender == 'trans_man' || gender == 'two_spirit' || gender == 'non_binary')
+            {   
+                if(gender == 'male_non_smoker')
                 {
-                    if(smoking == 'true'){
-                        var monthly_premium = (x*5.23).toFixed(2);
-                        document.getElementById("monthly_premium").value = monthly_premium;
-                    } else {
-                        var monthly_premium = (x*4.43).toFixed(2);
-                        document.getElementById("monthly_premium").value = monthly_premium;
-                    }
-                } else{
-                    if(smoking == 'true'){
-                        var monthly_premium = (x*2.90).toFixed(2);
-                        document.getElementById("monthly_premium").value = monthly_premium;
-                    } else {
-                        var monthly_premium = (x*2.46).toFixed(2);
-                        document.getElementById("monthly_premium").value = monthly_premium;
-                    }
+                    var monthly_premium = (x*4.43).toFixed(2);
+                    document.getElementById("monthly_premium").value = monthly_premium;
+                } else if(gender == 'male_smoker') {
+                    var monthly_premium =  (x*5.23).toFixed(2);
+                    document.getElementById("monthly_premium").value = monthly_premium;
+                } else if(gender == 'female_non_smoker') {
+                    var monthly_premium = (x*2.46).toFixed(2);
+                    document.getElementById("monthly_premium").value = monthly_premium;
+                } else {
+                    var monthly_premium = (x*2.90).toFixed(2);
+                    document.getElementById("monthly_premium").value = monthly_premium;
                 }
         } else if(age>=45 && age<=49)
-            {
-                if(gender == 'male' || gender == 'trans_man' || gender == 'two_spirit' || gender == 'non_binary')
+            {   
+                if(gender == 'male_non_smoker')
                 {
-                    if(smoking == 'true'){
-                        var monthly_premium = (x*8.86).toFixed(2);
-                        document.getElementById("monthly_premium").value = monthly_premium;
-                    } else {
-                        var monthly_premium = (x*7.54).toFixed(2);
-                        document.getElementById("monthly_premium").value = monthly_premium;
-                    }
-                } else{
-                    if(smoking == 'true'){
-                        var monthly_premium = (x*4.81).toFixed(2);
-                        document.getElementById("monthly_premium").value = monthly_premium;
-                    } else {
-                        var monthly_premium = (x*4.10).toFixed(2);
-                        document.getElementById("monthly_premium").value = monthly_premium;
-                    }
+                    var monthly_premium = (x*7.54).toFixed(2);
+                    document.getElementById("monthly_premium").value = monthly_premium;
+                } else if(gender == 'male_smoker') {
+                    var monthly_premium =  (x*8.86).toFixed(2);
+                    document.getElementById("monthly_premium").value = monthly_premium;
+                } else if(gender == 'female_non_smoker') {
+                    var monthly_premium = (x*4.10).toFixed(2);
+                    document.getElementById("monthly_premium").value = monthly_premium;
+                } else {
+                    var monthly_premium = (x*4.81).toFixed(2);
+                    document.getElementById("monthly_premium").value = monthly_premium;
                 }
         } else if(age>=50 && age<=54)
-            {
-                if(gender == 'male' || gender == 'trans_man' || gender == 'two_spirit' || gender == 'non_binary')
+            {   
+                if(gender == 'male_non_smoker')
                 {
-                    if(smoking == 'true'){
-                        var monthly_premium = (x*14.57).toFixed(2);
-                        document.getElementById("monthly_premium").value = monthly_premium;
-                    } else {
-                        var monthly_premium = (x*12.39).toFixed(2);
-                        document.getElementById("monthly_premium").value = monthly_premium;
-                    }
-                } else{
-                    if(smoking == 'true'){
-                        var monthly_premium = (x*8.04).toFixed(2);
-                        document.getElementById("monthly_premium").value = monthly_premium;
-                    } else {
-                        var monthly_premium = (x*6.83).toFixed(2);
-                        document.getElementById("monthly_premium").value = monthly_premium;
-                    }
+                    var monthly_premium = (x*12.39).toFixed(2);
+                    document.getElementById("monthly_premium").value = monthly_premium;
+                } else if(gender == 'male_smoker') {
+                    var monthly_premium =  (x*14.57).toFixed(2);
+                    document.getElementById("monthly_premium").value = monthly_premium;
+                } else if(gender == 'female_non_smoker') {
+                    var monthly_premium = (x*6.83).toFixed(2);
+                    document.getElementById("monthly_premium").value = monthly_premium;
+                } else {
+                    var monthly_premium = (x*8.04).toFixed(2);
+                    document.getElementById("monthly_premium").value = monthly_premium;
                 }
         } else if(age>=55 && age<=59)
-            {
-                if(gender == 'male' || gender == 'trans_man' || gender == 'two_spirit' || gender == 'non_binary')
+            {   
+                if(gender == 'male_non_smoker')
                 {
-                    if(smoking == 'true'){
-                        var monthly_premium = (x*22.74).toFixed(2);
-                        document.getElementById("monthly_premium").value = monthly_premium;
-                    } else {
-                        var monthly_premium = (x*19.34).toFixed(2);
-                        document.getElementById("monthly_premium").value = monthly_premium;
-                    }
-                } else{
-                    if(smoking == 'true'){
-                        var monthly_premium = (x*13.13).toFixed(2);
-                        document.getElementById("monthly_premium").value = monthly_premium;
-                    } else {
-                        var monthly_premium = (x*11.15).toFixed(2);
-                        document.getElementById("monthly_premium").value = monthly_premium;
-                    }
+                    var monthly_premium = (x*19.34).toFixed(2);
+                    document.getElementById("monthly_premium").value = monthly_premium;
+                } else if(gender == 'male_smoker') {
+                    var monthly_premium =  (x*22.74).toFixed(2);
+                    document.getElementById("monthly_premium").value = monthly_premium;
+                } else if(gender == 'female_non_smoker') {
+                    var monthly_premium = (x*11.15).toFixed(2);
+                    document.getElementById("monthly_premium").value = monthly_premium;
+                } else {
+                    var monthly_premium = (x*13.13).toFixed(2);
+                    document.getElementById("monthly_premium").value = monthly_premium;
                 }
         } else if(age>=60 && age<=64)
-            {
-                if(gender == 'male' || gender == 'trans_man' || gender == 'two_spirit' || gender == 'non_binary')
+            {   
+                if(gender == 'male_non_smoker')
                 {
-                    if(smoking == 'true'){
-                        var monthly_premium = (x*35.34).toFixed(2);
-                        document.getElementById("monthly_premium").value = monthly_premium;
-                    } else {
-                        var monthly_premium = (x*30.03).toFixed(2);
-                        document.getElementById("monthly_premium").value = monthly_premium;
-                    }
-                } else{
-                    if(smoking == 'true'){
-                        var monthly_premium = (x*18.21).toFixed(2);
-                        document.getElementById("monthly_premium").value = monthly_premium;
-                    } else {
-                        var monthly_premium = (x*15.48).toFixed(2);
-                        document.getElementById("monthly_premium").value = monthly_premium;
-                    }
+                    var monthly_premium = (x*30.03).toFixed(2);
+                    document.getElementById("monthly_premium").value = monthly_premium;
+                } else if(gender == 'male_smoker') {
+                    var monthly_premium =  (x*35.34).toFixed(2);
+                    document.getElementById("monthly_premium").value = monthly_premium;
+                } else if(gender == 'female_non_smoker') {
+                    var monthly_premium = (x*15.48).toFixed(2);
+                    document.getElementById("monthly_premium").value = monthly_premium;
+                } else {
+                    var monthly_premium = (x*18.21).toFixed(2);
+                    document.getElementById("monthly_premium").value = monthly_premium;
                 }
         } else {
-            if(gender == 'male' || gender == 'trans_man' || gender == 'two_spirit' || gender == 'non_binary')
-                {
-                    if(smoking == 'true'){
-                        var monthly_premium = (x*47.92).toFixed(2);
-                        document.getElementById("monthly_premium").value = monthly_premium;
-                    } else {
-                        var monthly_premium = (x*40.74).toFixed(2);
-                        document.getElementById("monthly_premium").value = monthly_premium;
-                    }
-                } else{
-                    if(smoking == 'true'){
-                        var monthly_premium = (x*27.57).toFixed(2);
-                        document.getElementById("monthly_premium").value = monthly_premium;
-                    } else {
-                        var monthly_premium = (x*23.44).toFixed(2);
-                        document.getElementById("monthly_premium").value = monthly_premium;
-                    }
-                }
+            if(gender == 'male_non_smoker')
+            {
+                var monthly_premium = (x*40.74).toFixed(2);
+                document.getElementById("monthly_premium").value = monthly_premium;
+            } else if(gender == 'male_smoker') {
+                var monthly_premium =  (x*47.92).toFixed(2);
+                document.getElementById("monthly_premium").value = monthly_premium;
+            } else if(gender == 'female_non_smoker') {
+                var monthly_premium = (x*23.44).toFixed(2);
+                document.getElementById("monthly_premium").value = monthly_premium;
+            } else {
+                var monthly_premium = (x*27.57).toFixed(2);
+                document.getElementById("monthly_premium").value = monthly_premium;
+            }
         }
 
 
