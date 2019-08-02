@@ -9,12 +9,84 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="quote.js"></script>
 
 </head>
 
-<body>
-    <div class="container" style="margin-top: 70px">
+<body style="margin: 30px">
+    <h2>How much to protect that future?</h2>
+
+    <div class="row two-col">
+        <div class="col-1 col-md-6">
+            <form name="insurance_quote">
+                <div class="form-group_insurance"><select class="custom-select" id="Gender" required=""
+                        onchange="checkform()">
+                        <option disabled="disabled" selected="selected" value="">Gender</option>
+                        <option value="male_non_smoker">Male, non-smoker</option>
+                        <option value="male_smoker">Male, smoker</option>
+                        <option value="female_non_smoker">Female, non-smoker</option>
+                        <option value="female_smoker">Female, smoker</option>
+                    </select></div>
+
+                <div class="form-group_insurance"><select class="custom-select" id="age" required=""
+                        onchange="coverage_amount_change(); checkform()">
+                        <option disabled="disabled" selected="selected" value="">Today my Age is</option>
+                        <option value="29">Under 29</option>
+                        <option value="31">Between 30-34</option>
+                        <option value="36">Between 35-39</option>
+                        <option value="41">Between 40-44</option>
+                        <option value="46">Between 45-49</option>
+                        <option value="51">Between 50-54</option>
+                        <option value="56">Between 55-59</option>
+                        <option value="61">Between 60-64</option>
+                        <option value="66">Between 65-69</option>
+                    </select></div>
+
+                <div class="form-group_insurance"><select class="custom-select" id="coverage_amount" required=""
+                        onchange="checkform()">
+                        <option disabled="disabled" selected="selected" value="">Coverage Amount</option>
+                        <option value="50000">$50,000</option>
+                        <option value="100000">$100,000</option>
+                        <option value="150000">$150,000</option>
+                        <option value="200000">$200,000</option>
+                        <option value="250000">$250,000</option>
+                        <option value="300000">$300,000</option>
+                        <option value="350000">$350,000</option>
+                        <option value="400000">$400,000</option>
+                        <option value="450000">$450,000</option>
+                        <option value="500000">$500,000</option>
+                    </select><small id="premium_text">The maximum life insurance coverage available at age 65 is
+                        $150,000 and terminates at age 70</small></div>
+
+                <div class="monthly_premium_button"><button class="btn btn-success" disabled="disabled"
+                        id="submitbutton" type="button" onclick="javascript:GetQuote()">See My Monthly Premium</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-2 col-md-6 mt_32">
+            <p class="monthly_premium_button">Your Monthly premium for</p>
+
+            <p id="coverage_amount_p">coverage amount</p>
+            <div class="monthly_premium_button">
+                    <span class="input-dollar">$</span>
+                    <input style="padding-left: 8px;" id="monthly_premium" type="text" value="0.00">
+            </div>
+            <div class="monthly_premium_button">
+                <button class="btn btn-success complete_button" id="complete_application" style="display:none"
+                    type="button">Enter the contest and Start Application</button>
+            </div>
+        </div>
+
+        <div class="col-1 col-md-12 monthly_premium_button mt_32"><a href="#" id="no_thanks" style="display:none"
+                type="button">I'll just enter the contest.</a>
+
+            <p class="premium_text">*At ServicePlus we take your privacy very seriously. None of the information that
+                you enter is being stored or kept. The information that you enter here is used only to calculate your
+                monthly premium in this form.</p>
+        </div>
+    </div>
+
+    <!-- <div class="container" >
         <h3>Let's answer the question: How much to protect that future?</h3>
         <h4>Just answer these four quick questions</h4>
         <p>At ServicePlus we take your privacy very seriously. None of the information that you enter is being stored or
@@ -61,31 +133,32 @@
                     <option value="450000">$450,000</option>
                     <option value="500000">$500,000</option>
                 </select>
-                <small id="premium_text" style="display: none;color: indianred">The maximum life insurance coverage
+                <small id="premium_text">The maximum life insurance coverage
                     available at age 65 is $150,000 and terminates at age 70</small>
             </div>
             <div class="montly_premium_button">
-                <button type="button" id="submitbutton" style="margin-top: 30px" class="btn btn-success"
+                <button type="button" id="submitbutton" class="btn btn-success"
                     onclick="javascript:GetQuote()">See My Monthly Premium</button>
                 <p>(You'll be able to enter the contest too)</p>
             </div>
         </form>
-        <h3 style="text-align: center">Your Monthly premium for <p id="coverage_amount_p" style="display: inline-block">
+        <h3>Your Monthly premium for <p id="coverage_amount_p">
                 coverage amount</p> worth<br>of protecting that future is just:</h3>
         <div class="montly_premium_button">
             <span class="input-dollar left">
-                <input type="text" id="monthly_premium" style="text-align: center; border: none;margin-top: 30px"
+                <input type="text" id="monthly_premium"
                     value="00.00" disabled />
             </span>
             <p>Get another quote?</p>
-            <button type="button" class="btn btn-success"><a href="https://www.stackoverflow.com"
-                    style="color: white; text-decoration: none;margin-top: 10px">Complete your Application</a></button>
+            <button type="button" class="btn btn-success"><a id="button_anchor" href="https://www.stackoverflow.com"
+                    >Complete your Application</a></button>
             <p>(No information will be transmitted)</p>
-            <button type="button" style="margin-top: 20px" class="btn btn-primary">No thanks. I'll just enter the
+            <button type="button" id="no_thanks" class="btn btn-primary">No thanks. I'll just enter the
                 contest.</button>
         </div>
 
-    </div>
+    </div> -->
 </body>
+<script src="quote.js"></script>
 
 </html>
